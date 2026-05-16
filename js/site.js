@@ -79,8 +79,16 @@ function initNavScroll() {
   }, { passive: true });
 }
 
+/* ---------- Avatar fade-in ---------- */
+function initAvatar() {
+  const av = document.querySelector('.js-avatar');
+  if (!av) return;
+  setTimeout(() => av.classList.add('in'), 80);
+}
+
 /* ---------- Boot ---------- */
 document.addEventListener('DOMContentLoaded', () => {
+  initAvatar();
   initPullUp();
   initSkillCycle();
   initReveal();
