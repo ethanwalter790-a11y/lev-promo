@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лев Степанов — разработчик, маркетолог, GEO-аудит</title>
+  <meta name="description" content="Лев Степанов — разрабатываю сайты на Webflow, Taptop и в коде, настраиваю Яндекс Директ, провожу GEO-аудит. Делаю понятно и работает.">
+  <link rel="canonical" href="https://lev-stepanov.ru/">
+  <meta property="og:title" content="Лев Степанов — разработчик и маркетолог">
+  <meta property="og:description" content="Сайты, реклама и GEO-аудит под ключ.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="theme-color" content="#0C0C0C">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Лев Степанов",
+    "jobTitle": "Веб-разработчик и маркетолог",
+    "telephone": "+7-906-110-90-00",
+    "url": "https://lev-stepanov.ru",
+    "sameAs": [
+      "https://t.me/LevStepanov"
+    ],
+    "knowsAbout": ["Webflow", "Taptop", "Яндекс Директ", "SEO", "GEO-аудит", "веб-разработка"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="hero" aria-label="Главный экран">
+
+    <!-- Noise grain (SVG feTurbulence — no external image) -->
+    <svg class="hero-grain" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <filter id="grain-filter" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise"/>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grain-filter)"/>
+    </svg>
+
+    <!-- Ambient glow orbs -->
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-3" aria-hidden="true"></div>
+
+    <!-- Bottom/top vignette -->
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <!-- Nav -->
+    <nav class="hero-nav" aria-label="Главная навигация">
+      <div class="hero-nav-inner">
+        <span class="hero-nav-logo">Лев Степанов</span>
+        <ul class="hero-nav-links">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#contact">Контакт</a></li>
+        </ul>
+        <a href="#contact" class="hero-nav-cta">Связаться</a>
+      </div>
+    </nav>
+
+    <!-- Content anchored to bottom -->
+    <div class="hero-content">
+      <div class="hero-grid">
+
+        <!-- Giant name -->
+        <h1 class="hero-title" aria-label="Лев Степанов">
+          <span class="pullup-mask" data-pullup data-pullup-delay="100">
+            <span class="pullup-word">ЛЕВ</span>
+          </span>
+          <span class="pullup-mask" data-pullup data-pullup-delay="260">
+            <span class="pullup-word">СТЕПА<span class="hero-title-asterisk">*</span>НОВ</span>
+          </span>
+        </h1>
+
+        <!-- Right: tagline + badge + CTA -->
+        <div class="hero-right">
+          <p class="hero-tagline">
+            Разрабатываю сайты, настраиваю рекламу и провожу GEO-аудит. Работаю удалённо со&nbsp;всей Россией.
+          </p>
+          <div class="hero-skill-badge" data-skill-badge aria-live="polite">
+            Webflow · Taptop · Разработка
+          </div>
+          <a href="#contact" class="btn btn-dark" style="width:fit-content">
+            Обсудить проект
+            <span class="btn-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="#EDEBE6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES
+       ============================================================ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Услуги</span>
+        <h2>Что я делаю</h2>
+        <p>Полный стек от дизайна до рекламы — работаю сам, без передачи субподрядчикам.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card js-reveal">
+          <div class="service-icon">🔷</div>
+          <h3>Webflow</h3>
+          <p>Сайты на Webflow для зарубежных проектов. Анимации, CMS, адаптив — без кода, но как с кодом.</p>
+          <span class="service-badge">Для международных проектов</span>
+        </div>
+
+        <div class="service-card js-reveal">
+          <div class="service-icon">🇷🇺</div>
+          <h3>Taptop</h3>
+          <p>Российский аналог Webflow — сайты, которые открываются в России без VPN. Те же возможности, другая юрисдикция.</p>
+          <span class="service-badge">Для российского рынка</span>
+        </div>
+
+        <div class="service-card js-reveal">
+          <div class="service-icon">⟨/⟩</div>
+          <h3>Разработка</h3>
+          <p>Кастомные сайты на HTML/CSS/JS — быстрые, без лишних зависимостей, с полным контролем над кодом.</p>
+          <span class="service-badge">Как этот сайт</span>
+        </div>
+
+        <div class="service-card js-reveal">
+          <div class="service-icon">📈</div>
+          <h3>Яндекс Директ</h3>
+          <p>5+ лет создаю и веду кампании. Настройка под ключ, ведение, аналитика и оптимизация ставок.</p>
+          <span class="service-badge">5+ лет опыта</span>
+        </div>
+
+        <div class="service-card js-reveal">
+          <div class="service-icon">🔍</div>
+          <h3>Базовое SEO</h3>
+          <p>Техническая оптимизация, мета-теги, структура URL, внутренняя перелинковка и скорость загрузки.</p>
+          <span class="service-badge">Техническое + On-page</span>
+        </div>
+
+        <div class="service-card js-reveal">
+          <div class="service-icon">🤖</div>
+          <h3>GEO-аудит</h3>
+          <p>AI-агент анализирует страницу по URL и выдаёт детальный отчёт с рекомендациями по оптимизации под ИИ-поиск.</p>
+          <span class="service-badge">ИИ-поиск · Новинка</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CASES
+       ============================================================ -->
+  <section class="section cases" id="cases">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Кейсы</span>
+        <h2>Проекты</h2>
+        <p>Реальные сайты с реальными результатами.</p>
+      </div>
+      <div class="cases-grid">
+
+        <a class="case-card js-reveal" href="https://tatiana-realtor.ru" target="_blank" rel="noopener">
+          <div class="case-img" style="background: linear-gradient(135deg, #1a0d07 0%, #2d1507 50%, #0d0d0d 100%);">
+            <span class="case-img-placeholder">🏠</span>
+            <span class="case-img-url">tatiana-realtor.ru</span>
+          </div>
+          <div class="case-body">
+            <div class="case-tags">
+              <span class="case-tag">HTML/CSS/JS</span>
+              <span class="case-tag">SEO</span>
+              <span class="case-tag">GEO</span>
+              <span class="case-tag">FTP-деплой</span>
+            </div>
+            <h3>Татьяна Овчинникова — риэлтор Казань</h3>
+            <p>Лендинг с ипотечным калькулятором, инвестиционной страницей, автообновлением цен и FTP-деплоем через GitHub Actions.</p>
+            <span class="case-more">Открыть сайт →</span>
+          </div>
+        </a>
+
+        <div class="case-card js-reveal" style="cursor: default;">
+          <div class="case-img" style="background: #F5F2EF; height: 260px;">
+            <div class="case-more-soon">
+              <span style="font-size:2.5rem">🚧</span>
+              <span>Следующий кейс скоро</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-tags">
+              <span class="case-tag">В процессе</span>
+            </div>
+            <h3>Новый проект</h3>
+            <p>Работаю над несколькими проектами — скоро добавлю сюда.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-text js-reveal">
+          <span class="eyebrow">Обо мне</span>
+          <h2>Делаю сайты и рекламу, которые работают</h2>
+          <p>Работаю на стыке разработки и маркетинга — понимаю не только как сделать красиво, но и как сделать так, чтобы приходили клиенты.</p>
+          <p>Верстаю на Webflow и Taptop (российский аналог для рынка РФ), пишу в чистом коде когда нужен полный контроль. Параллельно — 5+ лет в Яндекс Директ и базовое SEO.</p>
+          <p>Плюс разработан AI-агент для GEO-аудита: анализирует страницы под ИИ-поисковики и выдаёт план доработки.</p>
+          <div class="about-tools">
+            <span class="tool-pill">Webflow</span>
+            <span class="tool-pill">Taptop</span>
+            <span class="tool-pill">HTML/CSS/JS</span>
+            <span class="tool-pill">GitHub Actions</span>
+            <span class="tool-pill">Яндекс Директ</span>
+            <span class="tool-pill">SEO</span>
+            <span class="tool-pill">GEO-аудит</span>
+            <span class="tool-pill">Figma</span>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card js-reveal">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">лет в Яндекс Директ</div>
+          </div>
+          <div class="stat-card js-reveal">
+            <div class="stat-num">3</div>
+            <div class="stat-label">платформы: Webflow, Taptop, код</div>
+          </div>
+          <div class="stat-card js-reveal">
+            <div class="stat-num">🤖</div>
+            <div class="stat-label">AI-агент GEO-аудита</div>
+          </div>
+          <div class="stat-card js-reveal">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">удалённая работа по всей России</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner js-reveal">
+
+        <div>
+          <h2 class="contact-title">Давай поговорим</h2>
+          <p class="contact-sub">Расскажи о задаче — отвечу в течение дня и предложу, как лучше сделать.</p>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-link" href="tel:+79061109000">
+            <span class="contact-link-icon">📞</span>
+            +7 (906) 110-90-00
+          </a>
+          <a class="contact-link" href="https://t.me/LevStepanov" target="_blank" rel="noopener">
+            <span class="contact-link-icon">✈️</span>
+            Telegram
+          </a>
+          <a class="contact-link" href="https://max.ru" target="_blank" rel="noopener">
+            <span class="contact-link-icon">💬</span>
+            Написать в MAX
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 <strong>Лев Степанов</strong></p>
+        <p class="footer-copy">Webflow · Taptop · Разработка · Яндекс Директ · GEO-аудит</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
