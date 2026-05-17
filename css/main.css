@@ -623,15 +623,28 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-size: cover;
+  background-position: top center;
 }
+.case_card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0.88) 100%);
+  pointer-events: none;
+}
+.case_card-url,
+.case_card-title,
+.case_card-desc,
+.case_card-tags { position: relative; z-index: 1; }
 
-/* Gradients per project */
-.case_card-img--realtor   { background: linear-gradient(150deg, #7a2e08 0%, #b84a18 55%, #8c3810 100%); }
-.case_card-img--diagnosia { background: linear-gradient(150deg, #0c3d6e 0%, #1862aa 55%, #0e4e8c 100%); }
-.case_card-img--georadar  { background: linear-gradient(150deg, #16472a 0%, #27743e 55%, #1c5c34 100%); }
-.case_card-img--lignelibre{ background: linear-gradient(150deg, #4a3318 0%, #7a5428 55%, #5e4020 100%); }
-.case_card-img--inkonic   { background: linear-gradient(150deg, #7c2006 0%, #c03c18 55%, #962e0e 100%); }
-.case_card-img--bloomlex  { background: linear-gradient(150deg, #145248 0%, #228470 55%, #196658 100%); }
+/* Screenshots per project */
+.case_card-img--realtor   { background-image: url('../images/screenshot-realtor.jpg'); }
+.case_card-img--diagnosia { background-image: url('../images/screenshot-diagnosia.jpg'); }
+.case_card-img--georadar  { background-image: url('../images/screenshot-georadar.jpg'); }
+.case_card-img--lignelibre{ background-image: url('../images/screenshot-lignelibre.jpg'); }
+.case_card-img--inkonic   { background-image: url('../images/screenshot-graffiti.jpg'); }
+.case_card-img--bloomlex  { background-image: url('../images/screenshot-bloomlexplus.jpg'); }
 
 .case_card-url {
   font-size: 0.6875rem;
