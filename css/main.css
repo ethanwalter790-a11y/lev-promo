@@ -610,7 +610,7 @@ a { color: inherit; text-decoration: none; }
   text-decoration: none;
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s;
 }
-.case_card:hover {
+.cases_component .case_card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 48px rgba(0,0,0,0.18);
 }
@@ -681,7 +681,7 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid rgba(255,255,255,0.06);
   transition: background 0.2s;
 }
-.case_card:hover .case_card-cta { background: rgba(255,255,255,0.05); }
+.cases_component .case_card:hover .case_card-cta { background: rgba(255,255,255,0.05); }
 
 /* Responsive */
 @media (max-width: 767px) {
