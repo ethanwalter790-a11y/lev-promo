@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Лев Степанов — разработчик, маркетолог, GEO-аудит</title>
   <meta name="description" content="Лев Степанов — сайты на Webflow, Taptop и в коде, Яндекс Директ 5+ лет, GEO-аудит. Работаю со всей Россией удалённо.">
-  <link rel="canonical" href="https://lev-stepanov.ru/">
+  <link rel="canonical" href="https://lev-website.ru/">
   <meta property="og:title" content="Лев Степанов — разработчик и маркетолог">
   <meta property="og:description" content="Сайты, реклама и GEO-аудит под ключ.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://lev-website.ru/">
   <meta name="theme-color" content="#0C0C0C">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -24,7 +26,7 @@
     "name": "Лев Степанов",
     "jobTitle": "Веб-разработчик и маркетолог",
     "telephone": "+7-906-110-90-00",
-    "url": "https://lev-stepanov.ru",
+    "url": "https://lev-website.ru",
     "sameAs": ["https://t.me/LevClick"]
   }
   </script>
@@ -36,7 +38,15 @@
        ============================================================ -->
   <section class="hero" id="top">
 
-    <!-- SVG noise grain -->
+    <!-- Cinematic background video -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="video/hero 2.mp4" type="video/mp4">
+    </video>
+
+    <!-- Gradient overlays for text readability -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Grain texture -->
     <svg class="hero-grain" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <filter id="grain-filter">
         <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch" result="noise"/>
@@ -45,131 +55,160 @@
       <rect width="100%" height="100%" filter="url(#grain-filter)"/>
     </svg>
 
-    <!-- Ambient glows -->
-    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
-
-    <!-- Vignette -->
-    <div class="hero-vignette" aria-hidden="true"></div>
-
     <!-- Nav -->
-    <nav class="hero-nav" aria-label="Навигация">
-      <div class="hero-nav-inner">
-        <span class="hero-nav-logo">Лев Степанов</span>
-        <ul class="hero-nav-links">
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#cases">Кейсы</a></li>
-          <li><a href="#contact">Связаться</a></li>
+    <nav class="nav_component" aria-label="Навигация">
+      <div class="nav_inner">
+        <span class="nav_logo">Лев Степанов</span>
+        <ul class="nav_links">
+          <li><a class="nav_link" href="#services">Услуги</a></li>
+          <li><a class="nav_link" href="#cases">Кейсы</a></li>
+          <li><a class="nav_link" href="#contact">Связаться</a></li>
         </ul>
-        <a href="tel:+79061109000" class="hero-nav-cta">Позвонить</a>
+        <a href="tel:+79061109000" class="nav_cta">Позвонить</a>
       </div>
     </nav>
 
-    <!-- Centered content -->
-    <div class="hero-center">
-
-      <!-- Avatar -->
-      <div class="hero-avatar js-avatar">
-        <img src="images/lev-avatar-gen.png" alt="Лев Степанов" width="160" height="160">
-      </div>
-
-      <!-- Pull-up name -->
-      <h1 class="hero-title" aria-label="Лев Степанов">
-        <span class="pullup-mask" data-pullup data-pullup-delay="120">
-          <span class="pullup-word">ЛЕВ</span>
-        </span>
-        <span class="pullup-mask" data-pullup data-pullup-delay="300">
-          <span class="pullup-word">СТЕПА<span class="hero-asterisk">*</span>НОВ</span>
-        </span>
+    <!-- Title — top-left, frames the person below -->
+    <div class="hero-title">
+      <h1 class="hero-name" aria-label="Лев Степанов">
+        <span class="hero-name-wrap"><span class="hero-name-line">ЛЕВ<span class="hero-asterisk">*</span></span></span>
+        <span class="hero-name-wrap"><span class="hero-name-line hero-name-line--2">СТЕПАНОВ</span></span>
       </h1>
+    </div>
 
-      <!-- Cycling skill -->
-      <div class="hero-badge-wrap">
-        <span class="hero-skill-badge" data-skill-badge aria-live="polite">
-          Webflow · Taptop · Разработка
-        </span>
-      </div>
-
-      <!-- Contact links -->
-      <div class="hero-contacts" id="contact">
-        <a class="hero-contact-btn" href="tel:+79061109000">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <!-- Bottom-left — desc + contacts -->
+    <div class="hero-bottom" id="contact">
+      <p class="hero-desc-text">Сайты, реклама и GEO‑аудит по всей России удалённо.</p>
+      <div class="hero-contacts-row">
+        <a class="hero-cta-btn" href="tel:+79061109000">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           +7 (906) 110-90-00
         </a>
-        <a class="hero-contact-btn" href="https://t.me/LevClick" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          Telegram
+        <a class="hero-cta-btn hero-cta-btn--tg" href="https://t.me/LevClick" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram →
         </a>
-        <a class="hero-contact-btn" href="https://max.ru/u/f9LHodD0cOIKXZCjaWidcfH0VlmoyO8UxMyo7y4kpA-tnHTtDD_qM68I0dA" target="_blank" rel="noopener">
-          <svg class="max-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><polyline points="7 16 7 8 12 13 17 8 17 16"/></svg>
-          MAX
+        <a class="hero-cta-btn" href="https://max.ru/u/f9LHodD0cOIKXZCjaWidcfH0VlmoyO8UxMyo7y4kpA-tnHTtDD_qM68I0dA" target="_blank" rel="noopener">
+          MAX →
         </a>
       </div>
-
     </div>
+
   </section>
 
 
   <!-- ============================================================
-       SERVICES — compact
+       SERVICES — two carousel groups, 100vh
        ============================================================ -->
-  <section class="section services" id="services">
+  <section class="services_component" id="services">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Услуги</span>
-        <h2>Что делаю</h2>
+
+      <!-- A: Сайты -->
+      <div class="services_group js-reveal">
+        <div class="services_group-head">
+          <span class="eyebrow">Сайты</span>
+          <h2>Верстка и платформы</h2>
+        </div>
+        <div class="services_carousel-wrap">
+          <div class="services_carousel-track" id="track-sites">
+
+            <div class="service_card">
+              <div class="service_card-img">
+                <img class="service_card-img-pic" src="images/svc-webflow.jpg" alt="Webflow" loading="lazy">
+                <div class="service_card-img-fade"></div>
+              </div>
+              <div class="service_card-body">
+                <h3 class="service_card-title">Webflow</h3>
+                <p class="service_card-desc">Лендинги и веб-приложения на Webflow. Анимации, CMS, публикация без кода.</p>
+                <a class="service_card-arrow" href="#contact" aria-label="Связаться">→</a>
+              </div>
+            </div>
+
+            <div class="service_card">
+              <div class="service_card-img">
+                <img class="service_card-img-pic" src="images/svc-taptop.jpg" alt="Taptop" loading="lazy">
+                <div class="service_card-img-fade"></div>
+              </div>
+              <div class="service_card-body">
+                <h3 class="service_card-title">Taptop</h3>
+                <p class="service_card-desc">Российский конструктор: дизайн → верстка → публикация на отечественной платформе.</p>
+                <a class="service_card-arrow" href="#contact" aria-label="Связаться">→</a>
+              </div>
+            </div>
+
+            <div class="service_card">
+              <div class="service_card-img">
+                <img class="service_card-img-pic" src="images/svc-code.jpg" alt="Разработка" loading="lazy">
+                <div class="service_card-img-fade"></div>
+              </div>
+              <div class="service_card-body">
+                <h3 class="service_card-title">Разработка</h3>
+                <p class="service_card-desc">HTML / CSS / JS под ключ. Без фреймворков — быстро, легко, SEO-дружелюбно.</p>
+                <a class="service_card-arrow" href="#contact" aria-label="Связаться">→</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="services_carousel-nav">
+            <button type="button" class="services_carousel-btn" data-track="track-sites" data-dir="-1" aria-label="Назад">‹</button>
+            <button type="button" class="services_carousel-btn" data-track="track-sites" data-dir="1" aria-label="Вперёд">›</button>
+          </div>
+        </div>
       </div>
-      <div class="services-grid">
 
-        <div class="service-card js-reveal">
-          <div class="service-icon">🔷</div>
-          <div>
-            <h3>Webflow</h3>
-            <p>Для международных проектов</p>
+      <!-- B: Продвижение -->
+      <div class="services_group js-reveal">
+        <div class="services_group-head">
+          <span class="eyebrow">Продвижение</span>
+          <h2>Реклама и трафик</h2>
+        </div>
+        <div class="services_carousel-wrap">
+          <div class="services_carousel-track" id="track-promo">
+
+            <div class="service_card">
+              <div class="service_card-img">
+                <img class="service_card-img-pic" src="images/svc-direct.jpg" alt="Яндекс Директ" loading="lazy">
+                <div class="service_card-img-fade"></div>
+              </div>
+              <div class="service_card-body">
+                <h3 class="service_card-title">Яндекс Директ</h3>
+                <p class="service_card-desc">5+ лет ведения кампаний. Настройка, аудит, оптимизация ставок и конверсий.</p>
+                <a class="service_card-arrow" href="#contact" aria-label="Связаться">→</a>
+              </div>
+            </div>
+
+            <div class="service_card">
+              <div class="service_card-img">
+                <img class="service_card-img-pic" src="images/svc-seo.jpg" alt="SEO" loading="lazy">
+                <div class="service_card-img-fade"></div>
+              </div>
+              <div class="service_card-body">
+                <h3 class="service_card-title">SEO</h3>
+                <p class="service_card-desc">Техническое SEO + on-page оптимизация. Скорость, структура, семантическое ядро.</p>
+                <a class="service_card-arrow" href="#contact" aria-label="Связаться">→</a>
+              </div>
+            </div>
+
+            <div class="service_card">
+              <div class="service_card-img">
+                <img class="service_card-img-pic" src="images/svc-geo.jpg" alt="GEO-аудит" loading="lazy">
+                <div class="service_card-img-fade"></div>
+              </div>
+              <div class="service_card-body">
+                <h3 class="service_card-title">GEO-аудит</h3>
+                <p class="service_card-desc">AI-агент анализирует страницу по URL и выдаёт рекомендации за 60 секунд.</p>
+                <a class="service_card-arrow" href="#contact" aria-label="Связаться">→</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="services_carousel-nav">
+            <button type="button" class="services_carousel-btn" data-track="track-promo" data-dir="-1" aria-label="Назад">‹</button>
+            <button type="button" class="services_carousel-btn" data-track="track-promo" data-dir="1" aria-label="Вперёд">›</button>
           </div>
         </div>
-
-        <div class="service-card js-reveal">
-          <div class="service-icon">🇷🇺</div>
-          <div>
-            <h3>Taptop</h3>
-            <p>Российский аналог Webflow</p>
-          </div>
-        </div>
-
-        <div class="service-card js-reveal">
-          <div class="service-icon">⟨/⟩</div>
-          <div>
-            <h3>Разработка</h3>
-            <p>HTML/CSS/JS под ключ</p>
-          </div>
-        </div>
-
-        <div class="service-card js-reveal">
-          <div class="service-icon">📈</div>
-          <div>
-            <h3>Яндекс Директ</h3>
-            <p>5+ лет, настройка и ведение</p>
-          </div>
-        </div>
-
-        <div class="service-card js-reveal">
-          <div class="service-icon">🔍</div>
-          <div>
-            <h3>SEO</h3>
-            <p>Техническое + on-page</p>
-          </div>
-        </div>
-
-        <div class="service-card js-reveal">
-          <div class="service-icon">🤖</div>
-          <div>
-            <h3>GEO-аудит</h3>
-            <p>AI-агент по URL страницы</p>
-          </div>
-        </div>
-
       </div>
+
     </div>
   </section>
 
@@ -177,29 +216,105 @@
   <!-- ============================================================
        CASES — single featured
        ============================================================ -->
-  <section class="section cases" id="cases">
+  <!-- ============================================================
+       CASES — 2×2 grid
+       ============================================================ -->
+  <section class="cases_component" id="cases">
     <div class="container">
-      <div class="section-head">
+      <div class="cases_head">
         <span class="eyebrow">Кейсы</span>
         <h2>Проекты</h2>
       </div>
-      <a class="case-card js-reveal" href="https://tatiana-realtor.ru" target="_blank" rel="noopener">
-        <div class="case-img">
-          <div class="case-img-bg" aria-hidden="true"></div>
-          <div class="case-img-content">
-            <span class="case-img-url">tatiana-realtor.ru</span>
-            <h3>Татьяна Овчинникова — риэлтор Казань</h3>
-            <p>Лендинг: ипотечный калькулятор, инвест-страница, автообновление цен, FTP-деплой через GitHub Actions.</p>
+      <div class="cases_grid">
+
+        <a class="case_card js-reveal" href="https://tatiana-realtor.ru" target="_blank" rel="noopener">
+          <div class="case_card-img case_card-img--realtor">
+            <span class="case_card-url">tatiana-realtor.ru</span>
+            <h3 class="case_card-title">Татьяна Овчинникова — риэлтор</h3>
+            <p class="case_card-desc">Лендинг с ипотечным калькулятором, инвест-страницей и автообновлением цен. FTP-деплой через GitHub Actions.</p>
+            <div class="case_card-tags">
+              <span class="case_card-tag">HTML/CSS/JS</span>
+              <span class="case_card-tag">SEO</span>
+              <span class="case_card-tag">GEO</span>
+              <span class="case_card-tag">CI/CD</span>
+            </div>
           </div>
-          <div class="case-tags">
-            <span class="case-tag">HTML/CSS/JS</span>
-            <span class="case-tag">SEO</span>
-            <span class="case-tag">GEO</span>
-            <span class="case-tag">CI/CD</span>
+          <div class="case_card-cta">Открыть сайт →</div>
+        </a>
+
+        <a class="case_card js-reveal" href="https://ai-diagnosia.vercel.app" target="_blank" rel="noopener">
+          <div class="case_card-img case_card-img--diagnosia">
+            <span class="case_card-url">ai-diagnosia.vercel.app</span>
+            <h3 class="case_card-title">DiagnosIA — AI-диагностика</h3>
+            <p class="case_card-desc">Платформа анализа симптомов: голос, текст, фото. 300+ заболеваний, точность модели 91%, структурированный отчёт за минуты.</p>
+            <div class="case_card-tags">
+              <span class="case_card-tag">Claude API</span>
+              <span class="case_card-tag">Next.js</span>
+              <span class="case_card-tag">AI</span>
+              <span class="case_card-tag">SaaS</span>
+            </div>
           </div>
-        </div>
-        <div class="case-cta">Открыть сайт →</div>
-      </a>
+          <div class="case_card-cta">Открыть сайт →</div>
+        </a>
+
+        <a class="case_card js-reveal" href="https://georadar-kappa.vercel.app" target="_blank" rel="noopener">
+          <div class="case_card-img case_card-img--georadar">
+            <span class="case_card-url">georadar-kappa.vercel.app</span>
+            <h3 class="case_card-title">GeoRadar — GEO-аудит по URL</h3>
+            <p class="case_card-desc">Claude AI агент анализирует сайт по URL. GEO Score 0–100 по 5 платформам, план действий и PDF-отчёт под брендом агентства.</p>
+            <div class="case_card-tags">
+              <span class="case_card-tag">Claude AI</span>
+              <span class="case_card-tag">GEO Score</span>
+              <span class="case_card-tag">White-label</span>
+              <span class="case_card-tag">Next.js</span>
+            </div>
+          </div>
+          <div class="case_card-cta">Открыть сайт →</div>
+        </a>
+
+        <a class="case_card js-reveal" href="https://lignelibre.vercel.app" target="_blank" rel="noopener">
+          <div class="case_card-img case_card-img--lignelibre">
+            <span class="case_card-url">lignelibre.vercel.app</span>
+            <h3 class="case_card-title">Ligne Libre — украшения</h3>
+            <p class="case_card-desc">Бренд минималистичных украшений: 5 авторских коллекций, предзаказы, e-commerce витрина с философией «свободы формы».</p>
+            <div class="case_card-tags">
+              <span class="case_card-tag">Next.js</span>
+              <span class="case_card-tag">E-commerce</span>
+              <span class="case_card-tag">Дизайн</span>
+            </div>
+          </div>
+          <div class="case_card-cta">Открыть сайт →</div>
+        </a>
+
+        <a class="case_card js-reveal" href="https://graffiti.taptop.site/" target="_blank" rel="noopener">
+          <div class="case_card-img case_card-img--inkonic">
+            <span class="case_card-url">graffiti.taptop.site</span>
+            <h3 class="case_card-title">Inkonic — агентство уличного арта</h3>
+            <p class="case_card-desc">Лендинг агентства граффити: сеть 200+ художников, роспись фасадов и офисов. Выпускной проект курса Taptop.</p>
+            <div class="case_card-tags">
+              <span class="case_card-tag">Taptop</span>
+              <span class="case_card-tag">Дизайн</span>
+              <span class="case_card-tag">Анимации</span>
+            </div>
+          </div>
+          <div class="case_card-cta">Открыть сайт →</div>
+        </a>
+
+        <a class="case_card js-reveal" href="https://bloomlexplus.webflow.io/" target="_blank" rel="noopener">
+          <div class="case_card-img case_card-img--bloomlex">
+            <span class="case_card-url">bloomlexplus.webflow.io</span>
+            <h3 class="case_card-title">Bloomlex+ — юридические документы</h3>
+            <p class="case_card-desc">Сервис автоматической генерации юридических документов: иски, претензии, письма. Первый документ бесплатно. Выпускной проект курса Webflow.</p>
+            <div class="case_card-tags">
+              <span class="case_card-tag">Webflow</span>
+              <span class="case_card-tag">SaaS</span>
+              <span class="case_card-tag">CMS</span>
+            </div>
+          </div>
+          <div class="case_card-cta">Открыть сайт →</div>
+        </a>
+
+      </div>
     </div>
   </section>
 
