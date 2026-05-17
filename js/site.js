@@ -200,8 +200,30 @@ function initParallax() {
   }, { passive: true });
 }
 
+/* ---------- Preloader ---------- */
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  let hidden = false;
+  function hide() {
+    if (hidden) return;
+    hidden = true;
+    preloader.classList.add('is-hidden');
+    setTimeout(() => preloader.remove(), 700);
+  }
+
+  if (document.readyState === 'complete') {
+    setTimeout(hide, 200);
+  } else {
+    window.addEventListener('load', () => setTimeout(hide, 200));
+  }
+  setTimeout(hide, 5000); // safety fallback
+}
+
 /* ---------- Boot ---------- */
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initTypewriter();
   initReveal();
   initNavScroll();
