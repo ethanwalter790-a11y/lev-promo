@@ -29,6 +29,12 @@
   --shadow-md:  0 8px 32px rgba(0,0,0,0.10);
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Hero/dark surface tokens — used by footer */
+  --hero-bg:     #0C0C0C;
+  --hero-border: rgba(255,255,255,0.08);
+  --hero-text:   rgba(237,235,230,0.92);
+  --hero-muted:  rgba(237,235,230,0.38);
 }
 
 /* ---------- Reset ---------- */
@@ -53,18 +59,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- Shared ---------- */
-.section { padding: clamp(56px, 8vw, 100px) 0; }
-
-.section-head { margin-bottom: clamp(32px, 5vw, 56px); }
-.section-head h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: 8px;
-}
-.section-head p { color: var(--slate); }
-
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -479,32 +473,6 @@ a { color: inherit; text-decoration: none; }
   object-position: center;
   display: block;
 }
-.service_card-img-bg {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Gradient per service */
-.service_card-img-bg--webflow { background: linear-gradient(135deg, #4353FF 0%, #A78BFA 100%); }
-.service_card-img-bg--taptop  { background: linear-gradient(135deg, #E53935 0%, #FF7043 100%); }
-.service_card-img-bg--code    { background: linear-gradient(135deg, #0D1117 0%, #1E3A5F 100%); }
-.service_card-img-bg--direct  { background: linear-gradient(135deg, #FF6B00 0%, #FFB800 100%); }
-.service_card-img-bg--seo     { background: linear-gradient(135deg, #059669 0%, #10B981 100%); }
-.service_card-img-bg--geo     { background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%); }
-
-.service_card-img-mark {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 900;
-  color: rgba(255,255,255,0.18);
-  letter-spacing: -0.04em;
-  -webkit-user-select: none;
-  user-select: none;
-  pointer-events: none;
-}
-
 .service_card-img-fade {
   position: absolute;
   bottom: 0; left: 0;
@@ -647,12 +615,12 @@ a { color: inherit; text-decoration: none; }
 .case_card-tags { position: relative; z-index: 1; }
 
 /* Screenshots per project */
-.case_card-img--realtor::before   { background-image: url('../images/screenshot-realtor.jpg'); }
-.case_card-img--diagnosia::before { background-image: url('../images/screenshot-diagnosia.jpg'); }
-.case_card-img--georadar::before  { background-image: url('../images/screenshot-georadar.jpg'); }
-.case_card-img--lignelibre::before{ background-image: url('../images/screenshot-lignelibre.jpg'); }
-.case_card-img--inkonic::before   { background-image: url('../images/screenshot-graffiti.jpg'); }
-.case_card-img--bloomlex::before  { background-image: url('../images/screenshot-bloomlexplus.jpg'); }
+.case_card-img--realtor::before   { background-image: url('../images/screenshot-realtor.webp'); }
+.case_card-img--diagnosia::before { background-image: url('../images/screenshot-diagnosia.webp'); }
+.case_card-img--georadar::before  { background-image: url('../images/screenshot-georadar.webp'); }
+.case_card-img--lignelibre::before{ background-image: url('../images/screenshot-lignelibre.webp'); }
+.case_card-img--inkonic::before   { background-image: url('../images/screenshot-graffiti.webp'); }
+.case_card-img--bloomlex::before  { background-image: url('../images/screenshot-bloomlexplus.webp'); }
 
 .cases_component .case_card:hover .case_card-img::before { transform: scale(1.06); }
 
@@ -904,26 +872,17 @@ a { color: inherit; text-decoration: none; }
 .js-reveal.visible { opacity: 1; transform: none; }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — hero overrides (component rules live inside each section)
    ============================================================ */
 @media (max-width: 767px) {
-  .hero-nav-links { display: none; }
-  .services-grid { grid-template-columns: 1fr 1fr; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
-
   .hero-title { left: 20px; top: clamp(56px, 10vh, 80px); }
   .hero-bottom { left: 20px; right: 20px; bottom: 24px; }
   .hero-name { font-size: clamp(2.8rem, 16vw, 4.5rem); }
   .hero-desc-text { max-width: 100%; font-size: 0.95rem; }
-  .hero-contacts-row { flex-wrap: wrap; }
-
-
+  .cases_grid { gap: 12px; }
 }
 @media (max-width: 480px) {
   .hero-name { font-size: 20vw; }
-  .services-grid { grid-template-columns: 1fr; }
-  .hero-nav-cta { display: none; }
-  .case-img { padding: 24px; }
   .hero-cta-btn { padding: 9px 14px; font-size: 0.75rem; }
+  .case_card-img { min-height: clamp(160px, 45vw, 220px); }
 }

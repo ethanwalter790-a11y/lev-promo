@@ -12,6 +12,14 @@
   <meta property="og:locale" content="ru_RU">
   <meta property="og:url" content="https://lev-website.ru/">
   <meta name="theme-color" content="#0C0C0C">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Лев Степанов">
+  <meta property="og:image" content="https://lev-website.ru/images/logo.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Лев Степанов — разработчик и маркетолог">
+  <meta name="twitter:description" content="Сайты на Webflow, Taptop и в коде, Яндекс Директ 5+ лет, GEO-аудит. Работаю удалённо по всей России.">
   <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,15 +28,25 @@
   <link rel="stylesheet" href="css/main.css">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Лев Степанов",
-    "jobTitle": "Веб-разработчик и маркетолог",
-    "telephone": "+7-906-110-90-00",
-    "url": "https://lev-website.ru",
-    "sameAs": ["https://t.me/LevClick"]
-  }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Лев Степанов",
+      "jobTitle": "Веб-разработчик и маркетолог",
+      "description": "Разработка сайтов на Webflow, Taptop и HTML/CSS/JS. Яндекс Директ 5+ лет. GEO-аудит на базе AI. Работаю удалённо по всей России.",
+      "telephone": "+7-906-110-90-00",
+      "url": "https://lev-website.ru",
+      "sameAs": ["https://t.me/LevClick"],
+      "knowsAbout": ["Webflow", "Taptop", "SEO", "Яндекс Директ", "GEO-аудит", "HTML", "CSS", "JavaScript"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Лев Степанов — разработчик и маркетолог",
+      "url": "https://lev-website.ru"
+    }
+  ]
   </script>
 </head>
 <body>
@@ -131,7 +149,10 @@
 
             <div class="service_card">
               <div class="service_card-img">
-                <img class="service_card-img-pic" src="images/svc-webflow.jpg" alt="Webflow" loading="lazy">
+                <picture>
+                  <source srcset="images/svc-webflow.webp" type="image/webp">
+                  <img class="service_card-img-pic" src="images/svc-webflow.jpg" alt="Разработка сайтов на Webflow — лендинги, CMS, анимации без кода" loading="lazy">
+                </picture>
                 <div class="service_card-img-fade"></div>
               </div>
               <div class="service_card-body">
@@ -143,7 +164,10 @@
 
             <div class="service_card">
               <div class="service_card-img">
-                <img class="service_card-img-pic" src="images/svc-taptop.jpg" alt="Taptop" loading="lazy">
+                <picture>
+                  <source srcset="images/svc-taptop.webp" type="image/webp">
+                  <img class="service_card-img-pic" src="images/svc-taptop.jpg" alt="Разработка сайтов на Taptop — российский конструктор, дизайн и публикация" loading="lazy">
+                </picture>
                 <div class="service_card-img-fade"></div>
               </div>
               <div class="service_card-body">
@@ -155,7 +179,10 @@
 
             <div class="service_card">
               <div class="service_card-img">
-                <img class="service_card-img-pic" src="images/svc-code.jpg" alt="Разработка" loading="lazy">
+                <picture>
+                  <source srcset="images/svc-code.webp" type="image/webp">
+                  <img class="service_card-img-pic" src="images/svc-code.jpg" alt="Разработка сайтов на HTML CSS JS — быстро, без фреймворков, SEO-дружелюбно" loading="lazy">
+                </picture>
                 <div class="service_card-img-fade"></div>
               </div>
               <div class="service_card-body">
@@ -184,7 +211,10 @@
 
             <div class="service_card">
               <div class="service_card-img">
-                <img class="service_card-img-pic" src="images/svc-direct.jpg" alt="Яндекс Директ" loading="lazy">
+                <picture>
+                  <source srcset="images/svc-direct.webp" type="image/webp">
+                  <img class="service_card-img-pic" src="images/svc-direct.jpg" alt="Яндекс Директ — настройка и ведение рекламных кампаний, 5 лет опыта" loading="lazy">
+                </picture>
                 <div class="service_card-img-fade"></div>
               </div>
               <div class="service_card-body">
@@ -196,7 +226,10 @@
 
             <div class="service_card">
               <div class="service_card-img">
-                <img class="service_card-img-pic" src="images/svc-seo.jpg" alt="SEO" loading="lazy">
+                <picture>
+                  <source srcset="images/svc-seo.webp" type="image/webp">
+                  <img class="service_card-img-pic" src="images/svc-seo.jpg" alt="SEO-оптимизация — техническое SEO, on-page, скорость и семантическое ядро" loading="lazy">
+                </picture>
                 <div class="service_card-img-fade"></div>
               </div>
               <div class="service_card-body">
@@ -208,7 +241,10 @@
 
             <div class="service_card">
               <div class="service_card-img">
-                <img class="service_card-img-pic" src="images/svc-geo.jpg" alt="GEO-аудит" loading="lazy">
+                <picture>
+                  <source srcset="images/svc-geo.webp" type="image/webp">
+                  <img class="service_card-img-pic" src="images/svc-geo.jpg" alt="GEO-аудит — AI анализирует сайт по URL и выдаёт рекомендации за 60 секунд" loading="lazy">
+                </picture>
                 <div class="service_card-img-fade"></div>
               </div>
               <div class="service_card-body">
@@ -231,10 +267,7 @@
 
 
   <!-- ============================================================
-       CASES — single featured
-       ============================================================ -->
-  <!-- ============================================================
-       CASES — 2×2 grid
+       CASES — 2×3 grid
        ============================================================ -->
   <section class="cases_component" id="cases">
     <div class="container">
