@@ -1,0 +1,30 @@
+name: Деплой на Beget
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Деплой на Beget (FTP)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.LEV_FTP_SERVER }}
+          username: ${{ secrets.LEV_FTP_USERNAME }}
+          password: ${{ secrets.LEV_FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ./
+          state-name: .ftp-deploy-sync-v4
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            scripts/**
+            README.md
